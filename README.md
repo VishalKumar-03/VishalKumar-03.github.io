@@ -1,56 +1,69 @@
-<div align="center">
-  
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/jack-portfolio)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/jack-portfolio?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/jack-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/DdlVKS7MROY?style=social)](https://youtu.be/DdlVKS7MROY)
+Personal Portfolio Website
 
-  <br />
-  <br />
-  
-  <img src="./readme-images/project-logo.png" />
+Welcome to my personal portfolio website! This website showcases my projects, skills, experience, and certifications in a clean and modern design using the Jack Portfolio template.
 
-  <h2 align="center">Jack - Personal portfolio</h2>
+🚀 Features
 
-  This website is fully responsive personal portfolio, <br />Responsive for all devices, built using HTML, CSS, and JavaScript.
+Responsive Design – Optimized for desktop and mobile devices.
 
-  <a href="https://codewithsadee.github.io/jack-portfolio/"><strong>➥ Live Demo</strong></a>
+Projects Showcase – Highlights my best work with descriptions and links.
 
-</div>
+About Me – A brief introduction and professional summary.
 
-<br />
+Skills & Certifications – Displays my technical expertise and achievements.
 
-### Demo Screeshots
+Contact Section – Allows visitors to get in touch with me.
 
-![Jack Portfolio Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+🛠️ Tech Stack
 
-### Prerequisites
+Frontend: HTML, CSS, JavaScript
 
-Before you begin, ensure you have met the following requirements:
+Framework: Jack Portfolio Template
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+Hosting: GitHub Pages / Netlify / Vercel (TBD)
 
-### Run Locally
+📂 Installation & Setup
 
-To run **jack-portfolio** locally, run this command on your git bash:
+Clone the repository:
 
-Linux and macOS:
+git clone https://github.com/your-username/your-portfolio.git
 
-```bash
-sudo git clone https://github.com/codewithsadee/jack-portfolio.git
-```
+Navigate to the project folder:
 
-Windows:
+cd your-portfolio
 
-```bash
-git clone https://github.com/codewithsadee/jack-portfolio.git
-```
+Open index.html in a browser to view the portfolio locally.
 
-### Contact
+📌 Customization
 
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+Update the index.html, style.css, and script.js files to personalize the content and styling.
 
-### License
+Replace images in the assets/ folder with your own profile and project images.
 
-This project is **free to use** and does not contains any license.
+Modify projects.json (if applicable) to dynamically manage project details.
+
+📤 Deployment
+
+Use GitHub Pages:
+
+Push your repository to GitHub.
+
+Enable GitHub Pages from the repository settings.
+
+Your portfolio will be live at https://your-username.github.io/your-portfolio/.
+
+Use Netlify/Vercel:
+
+Connect your repository.
+
+Configure the build settings.
+
+Deploy with a custom domain or default URL.
+
+📧 Contact
+
+Feel free to reach out via email or LinkedIn for collaborations, job opportunities, or networking!
+
+Email: [n.vishalrony@gmail.com]
+
+Made with ❤️ by Vishal Kumar
