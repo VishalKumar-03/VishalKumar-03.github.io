@@ -103,3 +103,52 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.remove("light_theme");
   document.body.classList.add("dark_theme");
 }
+
+
+/* ========================================================================== */
+/*            Added code for "Load more work" button functionality           */
+/* ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const loadMoreButton = document.querySelector('.load-more');
+  const hiddenProjects = document.querySelectorAll('.project-list li.hidden');
+
+  if (loadMoreButton) {
+    loadMoreButton.addEventListener('click', () => {
+      // Remove the 'hidden' class from each hidden project card
+      hiddenProjects.forEach(project => {
+        project.classList.remove('hidden');
+      });
+      // Optionally, hide the load more button after loading the projects
+      loadMoreButton.style.display = 'none';
+    });
+  }
+});
+
+
+// for work experience:
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the work experience card using the new class
+  const workExperienceCard = document.querySelector('.work-experience-card');
+  const experienceModal = document.getElementById('experienceModal');
+  const modalCloseBtn = experienceModal.querySelector('.close');
+
+  // When the card is clicked, open the modal
+  workExperienceCard.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    experienceModal.style.display = 'block';
+  });
+
+  // Close the modal when the close button is clicked
+  modalCloseBtn.addEventListener('click', () => {
+    experienceModal.style.display = 'none';
+  });
+
+  // Optional: Close the modal when clicking outside of the modal content
+  window.addEventListener('click', (e) => {
+    if (e.target === experienceModal) {
+      experienceModal.style.display = 'none';
+    }
+  });
+});

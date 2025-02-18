@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vishal's - personal portfolio</title>
+  <title>Vishal's - Personal Portfolio</title>
 
   <!-- 
     - favicon
@@ -75,7 +75,11 @@
           </li>
 
           <li>
-            <a href="#portfolio" class="navbar-link">Portfolio.</a>
+            <a href="#project" class="navbar-link">Projects.</a>
+          </li>
+
+          <li>
+            <a href="#certification" class="navbar-link">Certifications.</a>
           </li>
 
           <li>
@@ -84,6 +88,8 @@
 
         </ul>
       </nav>
+
+      
 
     </div>
   </header>
@@ -164,7 +170,7 @@
         <ul class="stats-list">
 
           <li>
-            <a href="#" class="stats-card">
+            <a href="#" class="stats-card work-experience-card">
 
               <div class="card-icon">
                 <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
@@ -180,7 +186,7 @@
           </li>
 
           <li>
-            <a href="#" class="stats-card">
+            <a href="#project" class="stats-card">
 
               <div class="card-icon">
                 <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
@@ -200,7 +206,75 @@
       </section>
 
 
+<!-- Work Experience Modal -->
+<div id="experienceModal" class="modal">
+  <div class="modal-content">
+    <span class="close" aria-label="Close Modal">&times;</span>
+    <h2>Work Experience</h2><br>
+    <div class="experience-details">
+      <p>
+        <strong>Sapot Systems Inc - Texas, USA.</strong><br>
+        <em>Java Developer (Sep 2024 - Dec 2024)</em><br><br>
+        • Engineered high-performance software solutions utilizing Java and SQL, achieving 
+        99.9% system uptime and ensuring seamless integration across applications.<br>
+        • Authored detailed technical documentation, reducing onboarding time by 15%.<br> 
+        • Collaborated with cross-functional teams to optimize data workflows, improving 
+        processing speed by 20%.<br> 
+        • Debugged complex systems, enhancing reliability and reducing error rates by 25%.<br><br><br>        
+      </p>
+      <p>
+        <strong>Wipro Limited - Telangana, India. </strong><br>
+        <em>Software Development Engineer (Aug 2021 - Dec 2022)</em><br><br>
+        • Designed scalable software solutions, enhancing system efficiency by 30% through best 
+        practices.<br> 
+        • Managed end-to-end SDLC processes, ensuring 100% adherence to deadlines.<br> 
+        • Conducted data analysis using SQL, optimizing query performance by 40% for critical 
+        business decisions.<br> 
+        • Improved team collaboration by creating concise technical specifications and user 
+        manuals.<br> 
+        • Integrated advanced tools to streamline workflows, improving operational efficiency.<br><br><br> 
+      </p>
+      <p>
+        <strong>Smartbridge - Telangana, India.</strong><br>
+        <em>Machine Learning Intern (May 2019 - Dec 2019)</em><br><br>
+        • Learnt how to built Machine Learning models.
+      </p>
+    </div>
+  </div>
+</div>
 
+
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Existing scripts ...
+
+    // Work Experience Modal functionality
+    const workExperienceCard = document.querySelector('.work-experience-card');
+    const experienceModal = document.getElementById('experienceModal');
+    const modalCloseBtn = experienceModal.querySelector('.close');
+
+    // When the work experience card is clicked, open the modal
+    workExperienceCard.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      experienceModal.style.display = 'block';
+    });
+
+    // Close the modal when the close button is clicked
+    modalCloseBtn.addEventListener('click', () => {
+      experienceModal.style.display = 'none';
+    });
+
+    // Optional: Close the modal when clicking outside the modal content
+    window.addEventListener('click', (e) => {
+      if (e.target === experienceModal) {
+        experienceModal.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
 
 
       <!-- 
@@ -220,12 +294,12 @@
 
           <p class="section-text">
             Software Engineer with over 2 years of experience in full-stack development, software 
-engineering, and data engineering. Skilled in Java, Python, SQL, JavaScript, React.js, and cloud 
-computing (AWS, Azure, GCP). Experienced in designing software solutions, optimizing data 
-pipelines, and ensuring UI/UX experiences. Strong knowledge in ETL, data modeling, API 
-development, and performance optimization. Passionate about leveraging technology to create 
-solutions. Seeking to apply my technical expertise and problem-solving abilities in a challenging 
-environment. 
+            engineering, and data engineering. Skilled in Java, Python, SQL, JavaScript, React.js, and cloud 
+            computing (AWS, Azure, GCP). Experienced in designing software solutions, optimizing data 
+            pipelines, and ensuring UI/UX experiences. Strong knowledge in ETL, data modeling, API 
+            development, and performance optimization. Passionate about leveraging technology to create 
+            solutions. Seeking to apply my technical expertise and problem-solving abilities in a challenging 
+            environment. 
           </p>
 
           <div class="btn-group">
@@ -624,7 +698,7 @@ environment.
         - #PROJECTS
       -->
 
-      <section class="project" id="portfolio">
+      <section class="project" id="project">
 
         <ul class="project-list">
 
@@ -643,7 +717,7 @@ environment.
           </li>
 
           <li>
-            <a href="#" class="project-card">
+            <a href="https://github.com/Vishalkumar03/ResumeAnalyzer" class="project-card" target="_blank">
 
               <figure class="card-banner">
                 <img src="./assets/images/resume_project-1.png" class="w-100" alt="A macintosh on a yellow background.">
@@ -659,7 +733,7 @@ environment.
           </li>
 
           <li>
-            <a href="#" class="project-card">
+            <a href="https://github.com/Vishalkumar03/Encrypted-Messaging-App" class="project-card" target="_blank">
 
               <figure class="card-banner">
                 <img src="./assets/images/encrypted_project-2.png" class="w-100" alt="On a Blue background, a Wacom and a mouse.">
@@ -675,7 +749,7 @@ environment.
           </li>
 
           <li>
-            <a href="#" class="project-card">
+            <a href="https://github.com/Vishalkumar03/Event-Management-App" class="project-card" target="_blank">
 
               <figure class="card-banner">
                 <img src="./assets/images/event_project-3.png" class="w-100"
@@ -692,7 +766,7 @@ environment.
           </li>
 
           <li>
-            <a href="#" class="project-card">
+            <a href="https://github.com/Vishalkumar03/Hand-Gesture-Recognition" class="project-card" target="_blank">
 
               <figure class="card-banner">
                 <img src="./assets/images/hand_project-4.png" class="w-100"
@@ -709,7 +783,7 @@ environment.
           </li>
 
           <li>
-            <a href="#" class="project-card">
+            <a href="https://github.com/Vishalkumar03/Password-Manager" class="project-card" target="_blank">
 
               <figure class="card-banner">
                 <img src="./assets/images/passowrd_Project-5.png" class="w-100"
@@ -725,8 +799,8 @@ environment.
             </a>
           </li>
 
-          <li>
-            <a href="#" class="project-card">
+          <li class="hidden">
+            <a href="" class="project-card" target="_blank">
 
               <figure class="card-banner">
                 <img src="./assets/images/chatbot_project-6.png" class="w-100"
@@ -749,6 +823,69 @@ environment.
         </ul>
 
       </section>
+
+
+<!-- Certifications Section -->
+<section id="certification" class="certifications">
+  <div class="container">
+
+    <h2 class="h3 section-title">Certifications & Achievements</h2>
+    
+    <div class="certification-list">
+      <!-- Certification Card 1 -->
+      <div class="certification-card">
+        <h3>Google Business Intelligence Professional Certificate</h3>
+        <a href="https://coursera.org/share/fc7f302c16bfcf8eb52c187e69528b1d" target="_blank" class="view-certificate">
+          View Certificate
+        </a>
+      </div>
+
+      <!-- Certification Card 2 -->
+      <div class="certification-card">
+        <h3>Google Business Intelligence Badge (Credly)</h3>
+        <a href="https://www.credly.com/go/uzyYBdM5" target="_blank" class="view-certificate">
+          View Certificate
+        </a>
+      </div>
+
+      <!-- Certification Card 3 -->
+      <div class="certification-card">
+        <h3>CertNexus Certified Data Science Practitioner</h3>
+        <a href="https://coursera.org/share/5a3af220911f32df2f4b75be6f94f9f0" target="_blank" class="view-certificate">
+          View Certificate
+        </a>
+      </div>
+      
+      <!-- Add more certification cards as needed -->
+      <div class="certification-card">
+        <h3>Microsoft Azure SQL</h3>
+        <a href="https://www.coursera.org/account/accomplishments/verify/QHH4WBSW5QUL" target="_blank" class="view-certificate">
+          View Certificate
+        </a>
+      </div>
+
+      <div class="certification-card">
+        <h3>Explore Relational Database Services in Azure</h3>
+        <a href="https://learn.microsoft.com/api/achievements/share/en-us/VishalKumar-4143/748UXWJZ?sharingId=4BB506AB80E1C5B0" target="_blank" class="view-certificate">
+          View Certificate
+        </a>
+      </div>
+
+      <div class="certification-card">
+        <h3>Extract, Transform, and Load Data</h3>
+        <a href="https://coursera.org/verify/D4QTMEKPN66R" target="_blank" class="view-certificate">
+          View Certificate
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
 
 
       <!-- 
@@ -926,6 +1063,7 @@ environment.
     </article>
   </main>
 
+  <!-- Stats Card for Work Experience -->
 
 
 

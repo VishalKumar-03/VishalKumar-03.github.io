@@ -676,6 +676,7 @@ main { overflow-x: hidden; }
   overflow: hidden;
   border-radius: var(--radius-12);
   box-shadow: 2px 4px 6px hsla(0, 0%, 0%, 0.2);
+  pointer-events: auto;
 }
 
 .project-card::after {
@@ -684,6 +685,7 @@ main { overflow-x: hidden; }
   inset: 0;
   border-radius: inherit;
   transition: var(--transition-1);
+  pointer-events: none;
 }
 
 .project-card:is(:hover, :focus)::after {
@@ -697,6 +699,7 @@ main { overflow-x: hidden; }
   left: 0;
   width: 100%;
   padding: 20px;
+  pointer-events: none;
 }
 
 .project-card .card-title { margin-bottom: 10px; }
@@ -715,6 +718,7 @@ main { overflow-x: hidden; }
   font-size: var(--fs-6);
   color: var(--color-primary);
   transition-delay: 0s;
+  pointer-events: auto;
 }
 
 .project-card:is(:hover, :focus) :is(.card-title, .publish-date) {
@@ -729,6 +733,122 @@ main { overflow-x: hidden; }
   color: var(--raw-seinna);
   text-decoration: underline;
   margin-inline: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+/* Certifications*/
+
+.certification { 
+  padding-block: var(--section-padding); 
+  text-align: center;
+}
+
+.certification-list { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center; 
+}
+
+.certification-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-12);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  padding: 20px;
+  width: 300px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(20, 20, 20, 0.9));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF; /* Default font color for dark mode */
+}
+
+.certification-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 10px 25px rgba(255, 223, 186, 0.5);
+}
+
+.certification-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFFFFF; /* White in dark mode */
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.certification-card:hover .card-title {
+  color: #FFA500; /* Orange glow effect */
+  text-shadow: 0 0 8px rgba(255, 165, 0, 0.7);
+}
+
+.certification-card .cert-date {
+  font-size: 1rem;
+  color: #FFFFFF;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.certification-card:hover .cert-date {
+  opacity: 1;
+}
+
+/* Light Mode Styling */
+[data-theme="light"] .certification-card {
+  background: linear-gradient(135deg, rgba(240, 240, 240, 0.9), rgba(220, 220, 220, 0.9));
+  color: #000; /* Black font in light mode */
+}
+
+[data-theme="light"] .certification-card .card-title,
+[data-theme="light"] .certification-card .cert-date {
+  color: #000; /* Black font in light mode */
+}
+
+[data-theme="light"] .certification-card:hover .card-title {
+  color: #FF4500;
+  text-shadow: 0px 0px 10px #FF6347;
+}
+
+.view-certificate {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #00D4FF;
+  text-decoration: none;
+  border: 1px solid #00D4FF;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.view-certificate:hover {
+  background: #00D4FF;
+  color: #000;
+  text-shadow: 0px 0px 10px #00D4FF;
+}
+
+.load-more {
+  font-size: var(--fs-4);
+  color: var(--raw-seinna);
+  text-decoration: underline;
+  margin-inline: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 
@@ -880,6 +1000,45 @@ textarea.input-field {
   display: inline-block;
   color: var(--raw-seinna);
 }
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+/* Close Button */
+.modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content .close:hover {
+  color: #000;
+}
+
+
 
 
 
